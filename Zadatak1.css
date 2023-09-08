@@ -1,0 +1,12 @@
+.naslov{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(31,121,9,1) 48%, rgba(0,212,255,1) 100%);
+    text-align: center;
+    padding: 15px;
+    /* height: 90px; */
+    font-size: 20pt; 
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.box {
+   align-content: center;
+}
