@@ -1,12 +1,97 @@
-.naslov{
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(31,121,9,1) 48%, rgba(0,212,255,1) 100%);
+.naslov {
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(31, 121, 9, 1) 48%, rgba(0, 212, 255, 1) 100%);
     text-align: center;
     padding: 15px;
-    /* height: 90px; */
-    font-size: 20pt; 
+    font-size: 20pt;
     color: white;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.box {
-   align-content: center;
+
+#box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#search-input-container,
+#select-container {
+    margin-bottom: 10px;
+}
+
+#pretraga {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#suggestion-list {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#nova {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#add-items-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+#unos {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.items{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#button-container {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-end; 
+    margin-top: 10px; 
+}
+
+#submit {
+    padding: 12px 20px; 
+    font-size: 16px; 
+    background: linear-gradient(90deg, #4CAF50, #45a049); 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background 0.3s ease-in-out; 
+}
+
+#submit:hover {
+    background: linear-gradient(90deg, #45a049, #4CAF50); 
 }

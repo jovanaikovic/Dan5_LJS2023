@@ -1,9 +1,6 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
-​
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +8,7 @@
     <link rel="stylesheet" href="Zadatak1.css">
     <title>TODO</title>
 </head>
-​
+
 <body>
     <header>
         <div>
@@ -20,20 +17,25 @@
                     <h1>TODO List</h1>
                 </div>
                 <div id="box">
-                    <input id="pretraga" type="text" placeholder="Search Items...">
-                    <select id="suggestion-list">
-                        
-                    </select>
+                    <div id="search-input-container">
+                        <input id="pretraga" type="text" placeholder="Search Items...">
+                    </div>
+                    <div id="select-container">
+                        <select id="suggestion-list"></select>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
     <div>
-        <div>
+        <div id="nova">
             <h2 class="naziv">Add Items</h2>
-            <form>
+            <form id="add-items-form">
                 <input id="unos" type="text">
-                <input id="submit" type="submit" value="Submit">
+                <div id="button-container">
+                    <input id="submit" type="submit" value="Submit">
+                </div>
+            
             </form>
             <h2>Items</h2>
             <ul id="items">
@@ -44,93 +46,9 @@
             </ul>
         </div>
     </div>
-​
-<script>
-function addItem(event) {
-    event.preventDefault();
-    let newItemName = document.getElementById("unos").value;
-    console.log(newItemName);
-    if (newItemName) {
-        document.getElementById("items").innerHTML +=
-            "<li class='list-group-item'>" + newItemName + "<button>x</button>" + "</li>";
-           
-    document.getElementById("unos").value="";
-    }
-}
 
-
-
-document.querySelector("#submit").addEventListener("click", addItem);
-
-var itemsList = document.getElementById("items");
-
-itemsList.addEventListener("click", function (event) {
-    if (event.target.tagName === "BUTTON") {
-        var listItem = event.target.parentElement;
-        itemsList.removeChild(listItem);
-    }
-});
-
-const searchInput = document.getElementById('pretraga');
-const suggestionList = document.getElementById('suggestion-list');
-const itemList = document.getElementById('items');
-
-searchInput.addEventListener("input", searchSuggestions);
-
-function searchSuggestions() {
-    console.log(searchInput.value.toLowerCase())
-    const searchText = searchInput.value.toLowerCase();
-    suggestionList.innerHTML = ""; 
-    for (let i = 0; i < itemList.children.length; i++) {
-        const itemText = itemList.children[i].textContent.toLowerCase();
-        if (itemText.startsWith(searchText)) {
-            const suggestionItem = document.createElement('option');
-            suggestionItem.textContent = itemList.children[i].textContent.substring(0,itemList.children[i].textContent.length-1);
-            suggestionList.appendChild(suggestionItem);
-        
-        }
-    
-    }
-}
-
-document.getElementById("suggestion-list").addEventListener("change", function(event){
-    let selectedValue = event.target.value;
-    console.log(selectedValue)
-    searchInput.value = selectedValue;
-    const searchText = searchInput.value.toLowerCase();
-    const items = itemList.getElementsByTagName('li');
-
-    for (let i = 0; i < items.length; i++) {
-        const itemText = items[i].textContent.toLowerCase();
-        if (itemText.includes(searchText)) {
-            items[i].style.backgroundColor = "grey";
-        } else {
-        items[i].style.backgroundColor = "white";
-        }
-    }
-
-
-})
-
-// searchInput.addEventListener("input", Search);
-
-// function Search() {
-//     const searchText = searchInput.value.toLowerCase();
-//     const items = itemList.getElementsByTagName('li');
-
-//     for (let i = 0; i < items.length; i++) {
-//         const itemText = items[i].textContent.toLowerCase();
-//         if (itemText.includes(searchText)) {
-//             items[i].style.display = 'block';
-//         } else {
-//             items[i].style.display = 'none';
-//         }
-//     }
-// }
-
-
-//Jovana Ikovic
-//Aleksa Radnic
-</script>
+    <script src="proba.js">
+    </script>
 </body>
+
 </html>
