@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+}
+
+.container {
+    text-align: center;
+}
+
+.square-container {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.square {
+    width: 30px;
+    height: 30px;
+    background-color: #3498db;
+    color: #fff;
+    border: 1px solid #2980b9;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.square:hover {
+    background-color: #2980b9;
+    border-color: #3498db;
+}
+
+#num-squares {
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    background-color: white ;
+    color:black;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#num-squares:hover {
+    background-color: yellowgreen;
+}
+
+#add-square,
+#clear-squares,
+#check-palindrome {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#add-square:hover,
+#clear-squares:hover,
+#check-palindrome:hover {
+    background-color: #218c53;
+}
+
+#result-message {
+    margin-top: 10px;
+    color: #333;
+    font-weight: bold;
+}
